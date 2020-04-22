@@ -19,7 +19,7 @@ When you want to grab a to do, feel free to edit this readme and place your name
 
 ## Testing the app / Development
 - Ensure you have love downloaded and setup: https://love2d.org/
-- You'll want to alias to the full binary so you can run things like `love "<path to directory containing main.lua>"`
+- You'll want to alias to the full binary so you can run things like `love "<path to directory containing main.lua>"` and get the benefit of log prints and errors back to your shell
 - assuming you have the love.app in your app directory, you can use `alias love="/Applications/love.app/Contents/MacOS/love"` in your preferred shell file (.bash_profile, .zshrc, etc..)
 - compiling and running from shell will be `love "./"` if you're running directly with in the project folder `redox-remote-euchre`
 
@@ -48,3 +48,6 @@ The current plan for multiplayer support will be to host a game server using noo
 ### Nice-to-haves
 - [ ] player config (coloring, card backs, etc...), persist
 - [ ] general record ledger - tricks taken, sets, euchres, overall games won/lost per player
+### Stuff to think through
+- [ ] Should we have computer players for when we have 75% of table?
+- [ ] Should we allow players to join multiple concurrent tables? (avoid writing computer player logic)
