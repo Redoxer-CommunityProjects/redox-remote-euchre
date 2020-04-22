@@ -13,8 +13,8 @@ Does it still seem unnecessary? Yea, maybe. But I want to push myself and really
 This one is slightly self-serving - I've been playing around with Lua and Löve2d for a few weeks, getting my wits about me trying to write a retro 2d game with a college buddy of mine. This is mostly born from me poking around here.
 
 In my limited exposure so far, I think I can confidently articulate a couple non-selfish reasons why Lua and Löve2d will work well here:
-1. simplicity. nothing extra. Löve2d
-2. Lua is a scripting language, so it might feel familiar to you already
+1. simplicity. nothing extra. Löve2d is just that - a 2d game engine with networking and that's all we need. No need to mess around with more complex engines or languages.
+2. Lua is a scripting language, so it might feel familiar to you already. It's widely used in tons of places and games already, so it's proven.
 3. Löve2d has a strong community with awesome open source libraries available to help us move quickly and efficiently. Check out the [awesome guide](https://github.com/love2d-community/awesome-love2d)
 
 ## Interested in helping?
