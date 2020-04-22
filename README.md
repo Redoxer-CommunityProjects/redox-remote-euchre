@@ -36,7 +36,7 @@ The current plan for multiplayer support will be to host a game server using noo
 ## To Do
 ### Core Logic
 - [ ] Game initiation, dealing **(Alex)**
-- [ ] Bidding, setting trump
+- [ ] Bidding, setting trump **(Alex)**
 - [ ] Trick playing (set the suit on led card, update indications in players' hands accordingly, etc..)
 - [ ] Hand clean-up, dealer movement
 - [ ] trump indications
@@ -50,7 +50,7 @@ The current plan for multiplayer support will be to host a game server using noo
 - [ ] support setup table and join game from main menu
 - [ ] support table viewing (yay!)
 ### Assets
-- [ ] in-process table layout **(Alex)**
+- [ ] in-process table layout
 - [ ] card backs should have R^ logo in our colors on them :)
 ### Nice-to-haves
 - [ ] player config (coloring, card backs, etc...), persist
