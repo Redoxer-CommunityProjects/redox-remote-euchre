@@ -35,7 +35,7 @@ The current plan for multiplayer support will be to host a game server using noo
 
 ## To Do
 ### Core Logic
-- [ ] Game initiation, dealing
+- [ ] Game initiation, dealing **(Alex)**
 - [ ] Bidding, setting trump
 - [ ] Trick playing (set the suit on led card, update indications in players' hands accordingly, etc..)
 - [ ] Hand clean-up, dealer movement
@@ -46,12 +46,12 @@ The current plan for multiplayer support will be to host a game server using noo
 - [ ] setup table (generate table id, put somewhere for person to see)
 - [ ] join table
 ### Networking
-- [ ] Get noobhub running on heroku
-- [ ] support setup table and join game from main menu (generate table id)
+- [ ] Get noobhub running on heroku  **(Alex)**
+- [ ] support setup table and join game from main menu
 - [ ] support table viewing (yay!)
 ### Assets
 - [ ] in-process table layout **(Alex)**
-- [ ] card backs should have R^ logo in our colors on them :) **(Alex)**
+- [ ] card backs should have R^ logo in our colors on them :)
 ### Nice-to-haves
 - [ ] player config (coloring, card backs, etc...), persist
 - [ ] general record ledger - tricks taken, sets, euchres, overall games won/lost per player
