@@ -11,17 +11,17 @@ The current plan for multiplayer support will be to host a game server using noo
 
 ## To Do
 ### Core Logic
-- [] Game initiation, dealing
-- [] Bidding, setting trump
-- [] Trick playing
-- [] Hand clean-up, dealer movement
+- [ ] Game initiation, dealing
+- [ ] Bidding, setting trump
+- [ ] Trick playing
+- [ ] Hand clean-up, dealer movement
 ### Meta-game
-- [] Main menu (Alex)
-- [] setup table
-- [] join table
+- [ ] Main menu (Alex)
+- [ ] setup table
+- [ ] join table
 ### Networking
-- [] Get noobhub running on heroku
-- [] support setup table and join game from main menu
-- [] support table viewing (yay!)
+- [ ] Get noobhub running on heroku
+- [ ] support setup table and join game from main menu
+- [ ] support table viewing (yay!)
 ### assets
-- [] in-process table layout (Alex)
+- [ ] in-process table layout (Alex)
