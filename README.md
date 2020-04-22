@@ -7,8 +7,15 @@ A couple over-arching reasons compelled me to start this project:
 2. Ads - gross. Again - we can do better than that
 3. a Redox-community project that ISN'T directly Redox work might be really cool!
 
+Does it still seem unnecessary? Yea, maybe. But I want to push myself and really grow in my technical chops, so at the end of the day this project is bigger than just the end-product and problem it is designed to solve.
+
 ## Why Lua and Löve2d?
-This one is slightly self-serving - I've been playing around with Lua and Löve2d for a few weeks, getting my chops about me trying to write a retro 2d game with a college buddy of mine. This is mostly born from me poking around here.
+This one is slightly self-serving - I've been playing around with Lua and Löve2d for a few weeks, getting my wits about me trying to write a retro 2d game with a college buddy of mine. This is mostly born from me poking around here.
+
+In my limited exposure so far, I think I can confidently articulate a couple non-selfish reasons why Lua and Löve2d will work well here:
+1. simplicity. nothing extra. Löve2d
+2. Lua is a scripting language, so it might feel familiar to you already
+3. Löve2d has a strong community with awesome open source libraries available to help us move quickly and efficiently. Check out the [awesome guide](https://github.com/love2d-community/awesome-love2d)
 
 ## Interested in helping?
 Awesome! If you haven't written in Lua before, check out [this link](http://tylerneylon.com/a/learn-lua/). I found it particularly helpful for getting me off the ground and writing quickly.
