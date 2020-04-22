@@ -55,6 +55,7 @@ The current plan for multiplayer support will be to host a game server using noo
 ### Nice-to-haves
 - [ ] player config (coloring, card backs, etc...), persist
 - [ ] general record ledger - tricks taken, sets, euchres, overall games won/lost per player
+- [ ] Name Generator **(James)**
 ### Stuff to think through
 - [ ] Should we have computer players for when we have 75% of table?
 - [ ] Should we allow players to join multiple concurrent tables? (avoid writing computer player logic)
