@@ -36,9 +36,9 @@ The current plan for multiplayer support will be to host a game server using noo
 
 ## To Do
 ### Core Logic
-- [ ] Game initiation, dealing **(Alex)**
+- [X] Game initiation, dealing 
 - [ ] Bidding, setting trump **(Alex)**
-- [ ] Trick playing (set the suit on led card, update indications in players' hands accordingly, etc..)
+- [ ] Trick playing (set the suit on led card, update indications in players' hands accordingly, etc..) **(Alex)**
 - [ ] Hand clean-up, dealer movement
 - [ ] trump indications
 - [ ] suit indications
