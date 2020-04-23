@@ -31,6 +31,17 @@ local euchreDeck = {
     { 'SpadesA', 'Spades', 'A' },
 }
 
+local gameState = {
+    myPlayer = {},
+    opp1 = {},
+    opp2 = {},
+    partner = {},
+    score = {},
+    currentHand = {},
+    deck = {},
+    tableOrder = { 'myPlayer', 'opp1', 'partner', 'opp2'}
+}
+
 local shuffledDeck = {}
 
 function love.load()
@@ -39,6 +50,8 @@ function love.load()
     iffy.newAtlas('assets/sprites/playingCardBacks.png')
     -- shuffle like 8 bajillion times.
     shuffledDeck = shuffleDeck(euchreDeck) -- this is our initial shuffled deck. we'll shuffle more later ;)
+    gameState.deck = shuffledDeck
+    gameState = startGame(gameState) -- testing code right now. This will move behind other code later
 end
 
 function love.update(dt)
@@ -47,9 +60,24 @@ end
 
 function love.draw()
     love.graphics.setBackgroundColor(0, 120/255, 0) -- a sweet sweet felt green :)
-    local x, y = love.graphics.getHeight()/2, 30
+    
+    -- temporarily: draw each persons hand, print dealer position, print deck
+    -- to ensure we are dealing correctly!
+    love.graphics.print('Dealer: '..gameState.dealerPos, 1100, 10)
+    local x, y = 360, 400
     for _,info in ipairs(shuffledDeck) do
         iffy.drawSprite('card'..info[1]..'.png', y, x, 0, scaleCards)
         y = y + 30
+    end
+    x = 50
+    y = 30
+    for _,info in ipairs(gameState.tableOrder) do
+        y = 30
+        local player = gameState[info]
+        for _,card in ipairs(player) do
+            iffy.drawSprite('card'..card[1]..'.png', y, x, 0, scaleCards)
+            y = y + 30
+        end
+        x = x + 180
     end
 end
