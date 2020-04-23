@@ -27,9 +27,9 @@ When you want to grab a to do, feel free to edit this readme and place your name
 ## Testing the app / Development
 - get Lua installed. If you use homebrew, should be as easy as `brew install lua`!
 - Ensure you have love downloaded and setup: https://love2d.org/
-- You'll want to alias to the full binary so you can run things like `love "<path to directory containing main.lua>"` and get the benefit of log prints and errors back to your shell
-- assuming you have the love.app in your app directory, you can use `alias love="/Applications/love.app/Contents/MacOS/love"` in your preferred shell file (.bash_profile, .zshrc, etc..)
-- compiling and running from shell will be `love "./"` if you're running directly with in the project folder `redox-remote-euchre`
+- Move the resulting `love.app` to your Applications directory
+- add `alias love="/Applications/love.app/Contents/MacOS/love"` in your preferred shell file (.bash_profile, .zshrc, etc..)
+- compiling and running from terminal will be `love "./"` if you're running directly with in the project folder `redox-remote-euchre` that should start up the game!
 
 ## Multiplayer support
 The current plan for multiplayer support will be to host a game server using noobhub: https://github.com/Overtorment/NoobHub which is a node backend server. Likely on heroku as that has the lowest barrier to entry and is free
