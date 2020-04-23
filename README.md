@@ -25,6 +25,7 @@ Awesome! If you haven't written in Lua before, check out [this link](http://tyle
 When you want to grab a to do, feel free to edit this readme and place your name in bold after the item you want to tackle so we can avoid duplicative work!
 
 ## Testing the app / Development
+- get Lua installed. If you use homebrew, should be as easy as `brew install lua`!
 - Ensure you have love downloaded and setup: https://love2d.org/
 - You'll want to alias to the full binary so you can run things like `love "<path to directory containing main.lua>"` and get the benefit of log prints and errors back to your shell
 - assuming you have the love.app in your app directory, you can use `alias love="/Applications/love.app/Contents/MacOS/love"` in your preferred shell file (.bash_profile, .zshrc, etc..)
