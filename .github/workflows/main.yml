@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  confirmBuildability:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: LÖVE Build
+      uses: nhartland/love-build@master
+      with:
+        app_name: RedoxEuchre
+        love_version: '11.3'
+        source_dir: ./
+    # Directory in the GitHub workspace where the built distributables should be located
+        result_dir: build
