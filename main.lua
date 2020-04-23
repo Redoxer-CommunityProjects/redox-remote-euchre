@@ -1,6 +1,9 @@
 require 'euchreEngine'
+require 'player'
+
 local manager = require 'assets/libraries/roomy'.new()
 local state = require 'assets/pages/state'
+
 local iffy = require 'assets/libraries/iffy'
 local iffyCards, iffyCardBacks
 
@@ -13,6 +16,7 @@ function love.load()
     -- load our card sprites in to the iffy cache, get the splash page with menu options
     iffy.newAtlas('assets/sprites/playingCards.png')
     iffy.newAtlas('assets/sprites/playingCardBacks.png')
+    nameGenerator()
     -- shuffle like 8 bajillion times.
     shuffledDeck = shuffleDeck(initVars.euchreDeck) -- this is our initial shuffled deck. we'll shuffle more later ;)
     gameState.deck = shuffledDeck
