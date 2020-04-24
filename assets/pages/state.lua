@@ -2,7 +2,8 @@
 -- main.lua will require this when using roomy to manage our different scenes
 
 local state = {
-    title = require "assets/pages/title"
+    title = require "assets/pages/title",
+    inGame = require "assets/pages/inGame"
 }
 
 return state
