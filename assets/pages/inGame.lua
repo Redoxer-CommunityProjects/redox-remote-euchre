@@ -1,0 +1,3 @@
+local inGame = {}
+
+return inGame
