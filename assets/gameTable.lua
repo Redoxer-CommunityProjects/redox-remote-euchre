@@ -9,7 +9,7 @@ return {
   tilewidth = 32,
   tileheight = 32,
   nextlayerid = 5,
-  nextobjectid = 35,
+  nextobjectid = 50,
   backgroundcolor = { 0, 120, 0 },
   properties = {},
   tilesets = {},
@@ -125,7 +125,7 @@ return {
       type = "objectgroup",
       id = 3,
       name = "HUD",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -238,263 +238,303 @@ return {
       objects = {
         {
           id = 15,
-          name = "myCard-1",
+          name = "myPlayer-1",
           type = "",
           shape = "rectangle",
-          x = 409.92,
-          y = 645.969,
-          width = 112,
-          height = 152,
+          x = 379.268,
+          y = 611.217,
+          width = 140,
+          height = 190,
           rotation = -20,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "myPlayer"
+          }
         },
         {
           id = 16,
-          name = "myCard-2",
+          name = "myPlayer-2",
           type = "",
           shape = "rectangle",
-          x = 455.318,
-          y = 623.312,
-          width = 112,
-          height = 152,
+          x = 440.245,
+          y = 579.395,
+          width = 140,
+          height = 190,
           rotation = -10,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "myPlayer"
+          }
         },
         {
           id = 17,
-          name = "myCard-3",
+          name = "myPlayer-3",
           type = "",
           shape = "rectangle",
-          x = 529.189,
-          y = 603.373,
-          width = 112,
-          height = 152,
+          x = 522.364,
+          y = 559.456,
+          width = 140,
+          height = 190,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "myPlayer"
+          }
         },
         {
           id = 18,
-          name = "myCard-4",
+          name = "myPlayer-4",
           type = "",
           shape = "rectangle",
-          x = 615.552,
-          y = 603.373,
-          width = 112,
-          height = 152,
+          x = 608.727,
+          y = 552.125,
+          width = 140,
+          height = 190,
           rotation = 10,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "myPlayer"
+          }
         },
         {
           id = 19,
-          name = "myCard-5",
+          name = "myPlayer-5",
           type = "",
           shape = "rectangle",
-          x = 685.993,
-          y = 607.905,
-          width = 112,
-          height = 152,
+          x = 684.666,
+          y = 564.905,
+          width = 140,
+          height = 190,
           rotation = 20,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "myPlayer"
+          }
         },
         {
-          id = 20,
-          name = "partnerCard-5",
+          id = 35,
+          name = "partner-1",
           type = "",
           shape = "rectangle",
-          x = 467.363,
-          y = 7.98199,
-          width = 112,
-          height = 152,
+          x = 447.267,
+          y = 13.4429,
+          width = 140,
+          height = 190,
           rotation = 20,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "partner"
+          }
         },
         {
-          id = 21,
-          name = "partnerCard-4",
+          id = 36,
+          name = "partner-2",
           type = "",
           shape = "rectangle",
-          x = 487.17,
-          y = 23.7815,
-          width = 112,
-          height = 152,
+          x = 476.253,
+          y = 36.692,
+          width = 140,
+          height = 190,
           rotation = 10,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "partner"
+          }
         },
         {
-          id = 22,
-          name = "partnerCard-3",
+          id = 37,
+          name = "partner-3",
           type = "",
           shape = "rectangle",
-          x = 534.645,
-          y = 41.4113,
-          width = 112,
-          height = 152,
+          x = 525.379,
+          y = 53.7445,
+          width = 140,
+          height = 190,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "partner"
+          }
         },
         {
-          id = 23,
-          name = "partnerCard-2",
+          id = 38,
+          name = "partner-4",
           type = "",
           shape = "rectangle",
-          x = 594.615,
-          y = 43.7205,
-          width = 112,
-          height = 152,
+          x = 578.749,
+          y = 63.962,
+          width = 140,
+          height = 190,
           rotation = -10,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "partner"
+          }
         },
         {
-          id = 24,
-          name = "partnerCard-1",
+          id = 39,
+          name = "partner-5",
           type = "",
           shape = "rectangle",
-          x = 639.462,
-          y = 46.046,
-          width = 112,
-          height = 152,
+          x = 622.698,
+          y = 59.7549,
+          width = 140,
+          height = 190,
           rotation = -20,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "partner"
+          }
         },
         {
-          id = 25,
-          name = "opp2Card-1",
+          id = 40,
+          name = "opp1-1",
           type = "",
           shape = "rectangle",
-          x = 1059.59,
-          y = 595.459,
-          width = 112,
-          height = 152,
-          rotation = -110,
+          x = 200.961,
+          y = 175.428,
+          width = 140,
+          height = 190,
+          rotation = 70.0322,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "opp1"
+          }
         },
         {
-          id = 26,
-          name = "opp2Card-2",
+          id = 41,
+          name = "opp1-2",
           type = "",
           shape = "rectangle",
-          x = 1028.97,
-          y = 539.291,
-          width = 112,
-          height = 152,
-          rotation = -100,
+          x = 232.748,
+          y = 236.423,
+          width = 140,
+          height = 190,
+          rotation = 80.0322,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "opp1"
+          }
         },
         {
-          id = 27,
-          name = "opp2Card-3",
+          id = 42,
+          name = "opp1-3",
           type = "",
           shape = "rectangle",
-          x = 1007.67,
-          y = 455.906,
-          width = 112,
-          height = 152,
-          rotation = -90,
+          x = 252.641,
+          y = 318.553,
+          width = 140,
+          height = 190,
+          rotation = 90.0322,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "opp1"
+          }
         },
         {
-          id = 28,
-          name = "opp2Card-4",
+          id = 43,
+          name = "opp1-4",
           type = "",
           shape = "rectangle",
-          x = 1009.42,
-          y = 373.571,
-          width = 112,
-          height = 152,
-          rotation = -80,
+          x = 259.923,
+          y = 404.92,
+          width = 140,
+          height = 190,
+          rotation = 100.032,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "opp1"
+          }
         },
         {
-          id = 29,
-          name = "opp2Card-5",
+          id = 44,
+          name = "opp1-5",
           type = "",
           shape = "rectangle",
-          x = 1202.14,
-          y = 255.132,
-          width = 112,
-          height = 152,
-          rotation = 110,
+          x = 247.101,
+          y = 480.853,
+          width = 140,
+          height = 190,
+          rotation = 110.032,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "opp1"
+          }
         },
         {
-          id = 30,
-          name = "opp1Card-5",
+          id = 45,
+          name = "opp2-1",
           type = "",
           shape = "rectangle",
-          x = 27.4549,
-          y = 544.093,
-          width = 112,
-          height = 152,
-          rotation = 290,
+          x = 1202.95,
+          y = 242.11,
+          width = 140,
+          height = 190,
+          rotation = 109.968,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "opp2"
+          }
         },
         {
-          id = 31,
-          name = "opp1Card-4",
+          id = 46,
+          name = "opp2-2",
           type = "",
           shape = "rectangle",
-          x = 51.2174,
-          y = 513.517,
-          width = 112,
-          height = 152,
-          rotation = 280,
+          x = 1179.72,
+          y = 271.11,
+          width = 140,
+          height = 190,
+          rotation = 99.9678,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "opp2"
+          }
         },
         {
-          id = 32,
-          name = "opp1Card-3",
+          id = 47,
+          name = "opp2-3",
           type = "",
           shape = "rectangle",
-          x = 70.2082,
-          y = 456.527,
-          width = 112,
-          height = 152,
-          rotation = 270,
+          x = 1162.69,
+          y = 320.245,
+          width = 140,
+          height = 190,
+          rotation = 89.9678,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "opp2"
+          }
         },
         {
-          id = 33,
-          name = "opp1Card-2",
+          id = 48,
+          name = "opp2-4",
           type = "",
           shape = "rectangle",
-          x = 70.7674,
-          y = 400.586,
-          width = 112,
-          height = 152,
-          rotation = 260,
+          x = 1152.5,
+          y = 373.621,
+          width = 140,
+          height = 190,
+          rotation = 79.968,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "opp2"
+          }
         },
         {
-          id = 34,
-          name = "opp1Card-1",
+          id = 49,
+          name = "opp2-5",
           type = "",
           shape = "rectangle",
-          x = 170.571,
-          y = 203.766,
-          width = 112,
-          height = 152,
-          rotation = 70,
+          x = 1156.74,
+          y = 417.568,
+          width = 140,
+          height = 190,
+          rotation = 69.968,
           visible = true,
-          properties = {}
+          properties = {
+            ["player"] = "opp2"
+          }
         }
       }
     }
