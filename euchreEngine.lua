@@ -70,7 +70,7 @@ function startHand(gameState)
   	return deal(gameState)
 end
 
-function startGame(gameState)
+function startGame()
   	-- reset score
   	gameState.score = { us = 0, them = 0 }
 

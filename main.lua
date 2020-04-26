@@ -1,4 +1,3 @@
-require 'euchreEngine'
 require 'player'
 
 local manager = require 'assets/libraries/roomy'.new()
@@ -17,7 +16,6 @@ function love.load()
     -- shuffle like 8 bajillion times.
     shuffledDeck = shuffleDeck(initVars.euchreDeck) -- this is our initial shuffled deck. we'll shuffle more later ;)
     gameState.deck = shuffledDeck
-    gameState = startGame(gameState) -- testing code right now. This will move behind other code later
     manager:hook()
     manager:enter(state.inGame) -- just enter in to an "in process" game for now
 end
