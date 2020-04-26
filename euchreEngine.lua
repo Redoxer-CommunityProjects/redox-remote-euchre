@@ -51,8 +51,8 @@ function deal(gameState)
 			end
 		end
 	end
-	
 	-- the remaining cards go to the kitty
+	gameState.currentHand.kitty = deckToDeal
   	return gameState
 end
 
@@ -64,7 +64,7 @@ function startHand(gameState)
 	}
 	  
 	-- move the dealer
-	local nextPos = gameState.dealerPos + 1 % 4
+	local nextPos = (gameState.dealerPos + 1) % 4
 	gameState.dealerPos = nextPos == 0 and 4 or nextPos -- this is a js ternary
   	-- deal the next hand
   	return deal(gameState)

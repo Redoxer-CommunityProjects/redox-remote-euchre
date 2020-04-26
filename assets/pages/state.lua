@@ -3,7 +3,7 @@
 
 local state = {
     title = require "assets/pages/title",
-    inGame = require "assets/pages/inGame"
+    inGame = require "assets/pages/game/inGame"
 }
 
 return state
