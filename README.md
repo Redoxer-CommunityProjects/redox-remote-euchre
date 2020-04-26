@@ -51,12 +51,12 @@ The current plan for multiplayer support will be to host a game server using noo
 - [ ] support setup table and join game from main menu
 - [ ] support table viewing (yay!)
 ### Assets
-- [ ] in-process table layout
-- [ ] card backs should have R^ logo in our colors on them :)
+- [X] in-process table layout (this uses an app called [Tiled](https://doc.mapeditor.org/en/stable/manual/introduction/) to quickkly make changes to positions of things)
+- [X] card backs should have R^ logo in our colors on them :)
 ### Nice-to-haves
 - [ ] player config (coloring, card backs, etc...), persist
 - [ ] general record ledger - tricks taken, sets, euchres, overall games won/lost per player
-- [ ] Name Generator **(James)**
+- [X] Name Generator **(James)**
 ### Stuff to think through
 - [ ] Should we have computer players for when we have 75% of table?
 - [ ] Should we allow players to join multiple concurrent tables? (avoid writing computer player logic)
