@@ -17,7 +17,7 @@ function love.load()
     shuffledDeck = shuffleDeck(initVars.euchreDeck) -- this is our initial shuffled deck. we'll shuffle more later ;)
     gameState.deck = shuffledDeck
     manager:hook()
-    manager:enter(state.inGame) -- just enter in to an "in process" game for now
+    manager:enter(state.bidding) -- just enter in to an "in process" game for now
 end
 
 function love.update(dt)

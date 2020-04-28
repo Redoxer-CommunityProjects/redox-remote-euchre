@@ -8,6 +8,9 @@ iffy.newAtlas('assets/sprites/RplayingCardBacks.png')
 iffy.newImage('dealerImage', 'assets/sprites/dealer.png')
 iffy.newSprite('dealerImage', 'dealer.png', 0, 0, 64, 64)
 
+iffy.newImage('arrowImage', 'assets/sprites/arrow.png')
+iffy.newSprite('arrowImage', 'arrow.png', 0, 0, 64, 64)
+
 function drawHands ()
     local handLayer = drawLayers.layers[4]
     local playerHandIndex = table.generateValueIndex('properties.player', handLayer.objects)
@@ -54,4 +57,9 @@ function drawDealerButton ()
     end
     local currentDealerPos = table.find(findDealer, playerPos)
     iffy.drawSprite('dealer.png', currentDealerPos.x, currentDealerPos.y, 0, 1)
+end
+
+function drawBiddingArrow()
+    local arrowPos = gameState.currentHand.bidding.arrowPos
+    iffy.drawSprite('arrow.png', arrowPos.x, arrowPos.y, arrowPos.rotation * math.pi/180, 1)
 end
