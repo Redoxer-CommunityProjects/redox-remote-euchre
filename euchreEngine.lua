@@ -1,4 +1,5 @@
 require 'assets/libraries/helperFns'
+local inspect = require 'assets/libraries/inspect'
 
 urand = assert (io.open ('/dev/urandom', 'rb')) -- this pegs us to relying on Unix-like systems
 rand  = assert (io.open ('/dev/random', 'rb'))
@@ -86,4 +87,26 @@ function startGame()
 
   	-- now start up our hand
   	return startHand(gameState)
+end
+
+function firstRoundBidding()
+	local kitty = gameState.currentHand.kitty
+	local topCard, suit = kitty[1], kitty[2]
+	-- need to get the first position to draw the indicator at
+	local choicePos = (gameState.dealerPos + 1) % 4
+	choicePos = choicePos == 0 and 4 or choicePos
+	local arrowPositions = table.generateValueIndex('name', drawLayers.layers[5].objects)
+	local currentArrowPos = arrowPositions[gameState.tableOrder[choicePos]][1] -- TODO: something is up with the generateValueIndex and I had nested tables :(
+	-- set a couple values to help our drawing
+	gameState.currentHand.bidding = {}
+	gameState.currentHand.bidding.arrowPos = currentArrowPos
+	gameState.currentHand.bidding.currentChoice = gameState.tableOrder[choicePos]
+end
+
+function moveArrowPos()
+
+end
+
+function secondRoundBidding()
+
 end
