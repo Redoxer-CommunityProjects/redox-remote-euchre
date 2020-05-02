@@ -8,8 +8,8 @@ return {
   height = 25,
   tilewidth = 32,
   tileheight = 32,
-  nextlayerid = 6,
-  nextobjectid = 81,
+  nextlayerid = 7,
+  nextobjectid = 84,
   backgroundcolor = { 0, 120, 0 },
   properties = {},
   tilesets = {},
@@ -598,6 +598,45 @@ return {
           width = 64,
           height = 64,
           rotation = 90,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      id = 6,
+      name = "biddingDecisions",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 82,
+          name = "pass",
+          type = "",
+          shape = "rectangle",
+          x = 725,
+          y = 420,
+          width = 100,
+          height = 70,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 83,
+          name = "pickUp",
+          type = "",
+          shape = "rectangle",
+          x = 725,
+          y = 315,
+          width = 100,
+          height = 70,
+          rotation = 0,
           visible = true,
           properties = {}
         }
