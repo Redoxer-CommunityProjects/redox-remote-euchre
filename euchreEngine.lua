@@ -4,6 +4,7 @@ local inspect = require 'assets/libraries/inspect'
 urand = assert (io.open ('/dev/urandom', 'rb')) -- this pegs us to relying on Unix-like systems
 rand  = assert (io.open ('/dev/random', 'rb'))
 
+
 function RNG (b, m, r) -- graciously copied from https://stackoverflow.com/questions/31082209/other-ways-to-get-a-random-number-in-lua
   	b = b or 4
   	m = m or 256
@@ -100,11 +101,24 @@ function firstRoundBidding()
 	-- set a couple values to help our drawing
 	gameState.currentHand.bidding = {}
 	gameState.currentHand.bidding.arrowPos = currentArrowPos
+	gameState.currentHand.bidding.arrowPos.origX = currentArrowPos.x
+	gameState.currentHand.bidding.arrowPos.origY = currentArrowPos.y
 	gameState.currentHand.bidding.currentChoice = gameState.tableOrder[choicePos]
 end
 
 function moveArrowPos()
-
+	local prevChoice = gameState.currentHand.bidding.currentChoice
+	local prevIndex = table.indexOf(gameState.tableOrder, prevChoice)
+	local nextIndex = (prevIndex + 1) % 4
+	nextIndex = nextIndex == 0 and 4 or nextIndex
+	-- get the new position and values based on next players turn
+	gameState.currentHand.bidding.currentChoice = gameState.tableOrder[nextIndex]
+	local arrowPositions = table.generateValueIndex('name', drawLayers.layers[5].objects)
+	local currentArrowPos = arrowPositions[gameState.tableOrder[nextIndex]][1]
+	-- then set the positions
+	gameState.currentHand.bidding.arrowPos = currentArrowPos
+	gameState.currentHand.bidding.arrowPos.origX = currentArrowPos.x
+	gameState.currentHand.bidding.arrowPos.origY = currentArrowPos.y
 end
 
 function secondRoundBidding()

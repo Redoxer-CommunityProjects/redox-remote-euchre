@@ -42,3 +42,13 @@ function table.generateValueIndex(index, inputTable)
   end
   return newTable
 end
+
+function table.indexOf(t, object)
+  if type(t) ~= "table" then error("table expected, got " .. type(t), 2) end
+
+  for i, v in ipairs(t) do
+      if object == v then
+          return i
+      end
+  end
+end
