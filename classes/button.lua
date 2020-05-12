@@ -34,7 +34,7 @@ function Button.new(img, x, y, w, h, target)
     function self:highlight()
         -- move up two pixels, change color?
         if self.y == origY then
-            self.y = self.y - 2
+            self.y = self.y - 5
         end
     end
 

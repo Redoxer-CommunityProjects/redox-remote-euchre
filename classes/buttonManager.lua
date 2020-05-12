@@ -2,7 +2,7 @@ local ButtonManager = {}
 
 function isOverButton(mouseX, mouseY, button)
     if mouseX > button.x and mouseX < button.x + button.width
-        and mouseY > button.y and mouseY < button.height then
+        and mouseY > button.y and mouseY < button.y + button.height then
         
         return true;
     end
@@ -29,6 +29,12 @@ function ButtonManager.new()
         buttons[id] = nil;
     end
 
+    function self:draw()
+        for _, button in ipairs(buttons) do
+            button:draw()
+        end
+    end
+
     -- the button manager should highlight button currently hovered
     function self:update(dt)
         mouseX, mouseY = love.mouse.getPosition()
@@ -37,14 +43,15 @@ function ButtonManager.new()
         for _, button in ipairs(buttons) do
             if isOverButton(mouseX, mouseY, button) then
                 button:highlight()
+            else
+                -- otherwise, make sure the button is at resting state
+                button:rest()
             end
-            -- otherwise, make sure the button is at resting state
-            button:rest()
         end
     end
 
     function self:handleMouseClick(x, y, k)
-        if k == 'l' then
+        if k == 1 then
             for _, button in ipairs(buttons) do
                 if isOverButton(mouseX, mouseY, button) then
                     button:press()
