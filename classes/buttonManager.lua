@@ -4,16 +4,16 @@ function isOverButton(mouseX, mouseY, button)
     if mouseX > button.x and mouseX < button.x + button.width
         and mouseY > button.y and mouseY < button.y + button.height then
         
-        return true;
+        return true
     end
-    return false;
+    return false
 end
 -- ------------------------------------------------
 -- Constructor
 -- ------------------------------------------------
 function ButtonManager.new()
-    local self = {};
-    local buttons = {};
+    local self = {}
+    local buttons = {}
 
     function self:addButton(id, button)
         buttons[id] = button;
@@ -21,12 +21,16 @@ function ButtonManager.new()
 
     function self:addButtons(buttonsToAdd)
         for id, button in ipairs(buttonsToAdd) do
-            buttons[id] = button;
+            buttons[id] = button
         end
     end
 
+    function self:buttonExists(id)
+        return buttons[id] ~= nil
+    end
+
     function self:removeButton(id)
-        buttons[id] = nil;
+        buttons[id] = nil
     end
 
     function self:draw()
@@ -41,6 +45,7 @@ function ButtonManager.new()
         -- check each button, confirm if the mouse is over it
         -- if so, call the button's highlight
         for _, button in ipairs(buttons) do
+            button:update(dt)
             if isOverButton(mouseX, mouseY, button) then
                 button:highlight()
             else

@@ -5,9 +5,10 @@ local Button = require 'classes/button'
 local ButtonManager = require 'classes/buttonManager'
 
 local bidding = {}
-local biddingTime = 0
 
 local buttonManager = ButtonManager.new()
+local firstRoundTrump
+local pass
 function printPress()
     print('button pressed')
 end
@@ -16,21 +17,20 @@ end
 function bidding:enter()
     startGame()
     firstRoundBidding()
-    local firstRoundTrump = Button.new(
+    firstRoundTrump = Button.new(
         love.graphics.newImage('assets/buttons/'..gameState.currentHand.kitty[1][2]..'_icon.png'),
         735, 315, 64, 64, printPress)
-    buttonManager:addButton(1, firstRoundTrump)
 end
 
 function bidding:update(dt)
-    biddingTime = biddingTime + dt
     animateIndicator(dt)
-    buttonManager:update(dt)
-    -- temp - just move the indicator around
-    if (biddingTime > 2) then
-        moveArrowPos()
-        biddingTime = 0
+    -- if it is my turn, add our buttons!
+    if gameState.currentHand.bidding.currentChoice == 'myPlayer' then
+        if buttonManager:buttonExists(1) ~= true then
+            buttonManager:addButton(1, firstRoundTrump)
+        end
     end
+    buttonManager:update(dt)
 end
 
 function bidding:draw()
