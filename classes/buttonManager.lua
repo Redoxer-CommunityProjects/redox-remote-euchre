@@ -33,6 +33,10 @@ function ButtonManager.new()
         buttons[id] = nil
     end
 
+    function self:removeAllButtons()
+        buttons = nil
+    end
+
     function self:draw()
         for _, button in ipairs(buttons) do
             button:draw()

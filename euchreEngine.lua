@@ -124,3 +124,8 @@ end
 function secondRoundBidding()
 
 end
+
+function setTrump(suit)
+	gameState.currentHand.trump = suit
+	gameState.currentHand.caller = gameState.currentHand.bidding.currentChoice
+end
