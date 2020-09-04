@@ -33,19 +33,6 @@ function drawHands ()
     end
 end
 
-function drawKitty ()
-    for i = #gameState.currentHand.kitty, 1, -1 do
-        local kittyPos = drawLayers.layers[3].objects[2] -- yea, it's great controlling the inputs
-        local cardName = ''
-        if (i == 1) then
-            cardName = 'card'..gameState.currentHand.kitty[i][1]..'.png'
-        else
-            cardName = 'cardBack_r.png'
-        end
-        iffy.drawSprite(cardName, kittyPos.x, kittyPos.y, kittyPos.rotation * math.pi/180, initVars.scaleCards)
-    end
-end
-
 function drawDealerButton ()
     local dealerPos = gameState.dealerPos
     local dealerName = gameState.tableOrder[dealerPos]

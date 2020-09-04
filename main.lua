@@ -1,7 +1,7 @@
 require 'player'
 
-local manager = require 'assets/libraries/roomy'.new()
-local state = require 'assets/pages/state'
+manager = require 'assets/libraries/roomy'.new()
+state = require 'assets/pages/state'
 
 local iffyCards, iffyCardBacks
 local shuffledDeck = {}
